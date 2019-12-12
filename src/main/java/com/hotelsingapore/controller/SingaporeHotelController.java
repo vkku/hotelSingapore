@@ -12,16 +12,17 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.hotelsingapore.repository.HotelRecord;
 import com.hotelsingapore.repository.HotelRepository;
+import com.hotelsingapore.service.SingaporeHotelService;
 
 @RestController
 public class SingaporeHotelController {
 	
 	@Autowired
-	HotelRepository hotelRepository;
+	SingaporeHotelService singaporeHotelService;
 
     @GetMapping(value = "/getRecords")
     public ResponseEntity<String> fetchAllRecords() {
-        List<HotelRecord> hotelData = (List<HotelRecord>) hotelRepository.findAll();
+        List<HotelRecord> hotelData =  singaporeHotelService.getHotelRecords();
         ResponseEntity response = ResponseEntity.ok().body(hotelData);
         return response;
     }
