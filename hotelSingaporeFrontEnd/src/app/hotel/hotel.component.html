@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="col">
+    <div class="search-container">
+      <form [formGroup]="searchForm" (ngSubmit)="onSubmit(searchForm.value)">
+        <mat-form-field>
+          <input type="text" matInput placeholder="Search Hotel..." formControlName="name" autocomplete="off">
+          <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <button class="btn btn-primary" type="submit">Search</button>
+      </form>
+
+    </div>
+  </div>
+  <div class="col">
+    <mat-form-field>
+      <label>Sort Hotels By</label>
+      <mat-select (selectionChange)="onSortByPrice()">
+        <mat-option>
+          Price
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col">
+    <mat-form-field>
+      <mat-label>Filter by region</mat-label>
+      <mat-select>
+        <mat-option>
+          Price
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+
+
+<div class="row px-3 p-3">
+  <div class="col-3" *ngFor="let hotel of hotelList">
+    <div class="card">
+      <div class="card-body">
+        <div class="card-title">{{hotel.name }} ,{{hotel.neighbourhood }} ,{{hotel.neighbourhoodGroup}}</div>
+        <div class="card-text">
+          <div>Hotel Details</div>
+          <hr>
+          <div class="hotel-detail">
+            <label> Host Name : </label>
+            {{hotel.hostName}} <br>
+            <label> Room Type : </label>
+            {{hotel.roomType}} <br>
+            <label> Price : </label>
+            {{hotel.price}} <br>
+            <label> Latitude : </label>
+            {{hotel.latitude}} <br>
+            <label> Longitude : </label>
+            {{hotel.longitude}}
+          </div>
+
+        </div>
+        <a href="#" class="btn btn-primary">Book Hotel</a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
