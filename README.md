@@ -1,4 +1,6 @@
 Hackathon Codebase
 React + Spring Boot
-backend -> run `mvn install`
-frontend -> run `npm install` and `npm start`
+
+
+Backend -> run `mvn install`
+Frontend -> run `npm install` and `npm start`
