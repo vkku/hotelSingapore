@@ -5,6 +5,7 @@ React + Spring Boot
 2. mvn spring-boot:run
 
 Use swagger to hit API : http://localhost:8080/swagger-ui.html
+
 Frontend -> run `npm install` and `npm start`
 
 
