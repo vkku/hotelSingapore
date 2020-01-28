@@ -1,8 +1,10 @@
 Hackathon Codebase
 React + Spring Boot
 
+1. cd to project folder
+2. mvn spring-boot:run
 
-Backend -> run `mvn install`
+Use swagger to hit API : http://localhost:8080/swagger-ui.html
 Frontend -> run `npm install` and `npm start`
 
 
